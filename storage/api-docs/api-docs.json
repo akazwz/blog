@@ -1,10 +1,37 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Test",
-        "version": "3"
+        "title": "图书",
+        "version": "1"
     },
     "paths": {
+        "/api/book/{id}": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\BookController::getBookById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "返回根据id查询的书"
+                    }
+                }
+            }
+        },
+        "/api/allBook": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\BookController::getAllBook",
+                "responses": {
+                    "200": {
+                        "description": "查询所有图书"
+                    }
+                }
+            }
+        },
         "/api/swagger/doc": {
             "get": {
                 "operationId": "App\\Http\\Controllers\\SwaggerController::doc",

@@ -16,8 +16,7 @@ class BookController extends Controller
     }
     public function getAllBook()
     {
-        //$books = Book::all();
-        //return response()->json($books)->setEncodingOptions(JSON_UNESCAPED_UNICODE);
-        return '{content:HelloWorld!}';
+        $books = Book::all();
+        return response()->json($books)->setEncodingOptions(JSON_UNESCAPED_UNICODE);
     }
 }

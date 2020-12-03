@@ -1,0 +1,22 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Test",
+        "version": "3"
+    },
+    "paths": {
+        "/api/swagger/doc": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\SwaggerController::doc",
+                "responses": {
+                    "200": {
+                        "description": "An example resource"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

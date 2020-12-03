@@ -13,12 +13,9 @@ class SwaggerController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/swagger",
-     *     summary="werew")
-     * @OA\Response(
-     *     response=200,
-     *     description="描述")
-     * @return string[]
+     *     path="/api/swagger/doc",
+     *     @OA\Response(response="200", description="An example resource")
+     * )
      */
     public function doc()
     {

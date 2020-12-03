@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use L5Swagger\L5SwaggerServiceProvider;
 /**
  *
  * Class SwaggerController

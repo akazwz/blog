@@ -19,4 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::any('/book/{id}',[\App\Http\Controllers\BookController::class,'getBookById']);
 Route::any('/allBook',[\App\Http\Controllers\BookController::class,'getAllBook']);
+Route::any('/swagger/doc',[\App\Http\Controllers\SwaggerController::class,'doc']);
+
 

@@ -5,7 +5,7 @@
         "version": "1"
     },
     "paths": {
-        "/api/book/{id}": {
+        "/api/book/get/{id}": {
             "get": {
                 "operationId": "App\\Http\\Controllers\\BookController::getBookById",
                 "parameters": [
@@ -28,6 +28,40 @@
                 "responses": {
                     "200": {
                         "description": "查询所有图书"
+                    }
+                }
+            }
+        },
+        "/api/book/price/{sort}": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\BookController::getBookByPrice",
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "查询图书,传参为1从贵到便宜，传参其他从便宜到贵"
+                    }
+                }
+            }
+        },
+        "/api/books/price/{sort}": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\BookController::getBooksByPrice",
+                "parameters": [
+                    {
+                        "name": "sort",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "查询图书,传参为1从贵到便宜，传参其他从便宜到贵"
                     }
                 }
             }

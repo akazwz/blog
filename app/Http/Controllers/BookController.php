@@ -1,10 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\Models\Book;
-use http\Env\Request;
-use OpenApi\Annotations\OpenApi;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use function Symfony\Component\Translation\t;
 
 /**
  * @OA\Info(title="图书",version="1")
@@ -92,11 +89,5 @@ class BookController extends Controller
         return response()->json($books)->setEncodingOptions(JSON_UNESCAPED_UNICODE);
     }
 
-    public function insertBook(Request $request)
-    {
-        $book = new Book;
-        $book->book_name = $request->name;
-        $book->save();
-    }
 
 }

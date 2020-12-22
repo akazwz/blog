@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\FileUpController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SwaggerController;
 use Illuminate\Http\Request;
@@ -20,6 +21,8 @@ Route::post('file/upload',[FileUpController::class,'fileUp']);
 Route::post('news/add',[NewsController::class,'addNews']);
 Route::get('news/get',[NewsController::class,'getNewsById']);
 Route::get('news/all',[NewsController::class,'getAllNews']);
+Route::get('user/captcha',[LoginController::class,'captcha']);
+Route::post('user/login',[LoginController::class,'judgeLogin']);
 
 
 
